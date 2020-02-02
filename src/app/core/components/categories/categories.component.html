@@ -1,0 +1,7 @@
+<ng-container *ngIf="currentCategories && currentCategories.length > 0">
+    <mat-nav-list>
+        <a *ngIf="parentCategoryName" mat-list-item href="#" (click)="previousSelection.emit()">Back</a>
+        <a *ngFor="let category of currentCategories" mat-list-item href="#" (click)="categorySelection.emit(category)">{{category.name}}</a>
+        <a mat-list-item href="#">My account</a>
+    </mat-nav-list>
+</ng-container>
